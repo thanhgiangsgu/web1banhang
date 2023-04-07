@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.section-head-footer {
+  color: #fff;
+  text-align: center;
+}
+.title-footer {
+  font-size: 60px;
+}
+.title-subfooter {
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+.app{
+  margin: 15px;
+}
+.container-1{
+  background-color: none;
+  margin-top: 20px;
+}
+ul {
+  list-style: none;
+}
+.row-1{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer{
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 20px;
+  padding-bottom: 90px;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../Images/product/footer.png);
+  background-position: center;
+  background-size: cover;
+}
+.footer-col{
+  width: 20%;
+  padding: 0 5px;
+  text-align: left;
+}
+.footer-col h4{
+  font-size: 20px;
+  color: #ffffff ;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+  position: relative;
+  font-weight: 500;
+}
+.footer-col h4::before{
+  /* content: ''; */
+  /* position: absolute; */
+  /* left: 0; */
+  /* bottom: -10px; */
+  /* background-color: none; */
+  /* height: 2px; */
+  /* box-sizing: border-box; */
+  /* width: 50px; */
+}
+.footer-col h4:hover{
+  color: rgb(241, 144, 33);   
+} 
+.footer-col ul{
+  padding: 0px;
+}
+.footer-col ul li .fas{
+  color: #bbbbbb;
+  font-size: 15px;
+}   
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color:#bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: rgb(241, 144, 33);
+  padding-left: 10px;
+}
+@media(max-width: 767px){
+  .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+}
+@media(max-width: 574px){
+  .footer-col{
+      width: 100%;
+      margin-bottom: 30px;
+  }
+}

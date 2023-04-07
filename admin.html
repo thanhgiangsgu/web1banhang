@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <script src="js/admin.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/checkouts.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>    
+        window.onload =function()
+        {
+            // xuatSanPham('all');
+            showUserList();
+            createAdmin();
+            xuatSanPhamAdmin();
+        }
+    </script>
+
+    <div class="wrapper-admin">    
+            <div class="section-admin">
+                <header class="header-admin">Quản Trị Viên</header>
+                <div class="body-admin">
+                    <a href="#" class="link-admin"><li id="user" onclick="showUserList();themUser()">1.Quản Lý Khách Hàng</li></a>
+                    <a href="#" class="link-admin"><li id="" onclick="xuatSanPhamAdmin();themProduct()">2.Quản Lý Sản Phẩm</li></a>
+                    <a href="#" class="link-admin"><li id="" onclick="xuatQuanLyProductAdmin();themQuanLyProductAdmin()">2.Quản Lý Đơn Hàng</li></a>
+                    <a href="#" class="link-admin"></a>
+                   
+                    <a href="#" class="link-admin"></a>               
+                </div>
+            </div>
+            
+            <div class="section-admin-list">
+                <div class="section-admin-title" id="them-list">Danh Sách Sản Phẩm</div>               
+                <button class="section-admin-them section-admin-them-modal js-section-admin-them" id="them-title"> Thêm Sản Phẩm</button>
+               
+
+                <table id="userlist">
+                    <div id="admin-them-user"></div>
+                    <!-- <tr>
+                        <td>ID</td>
+                        <td>Tên Sản Phảm</td>
+                        <td>Thể Loại</td>
+                        <td>Ảnh</td>
+                        <td>Giá Gốc</td>
+                        <td>Giá Sale</td>
+                        <td>Gia Sale</td>                   
+                        <td>Thêm</td>
+                        <td>Sửa</td>
+                        <td>Xóa</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>Adidas Alpha BOUNCE</td>
+                        <td>adidas</td>                 
+                        <td><img class="admin-img" src="../Mau/Images/productvinh/product/adidas1.png" alt=""></td>
+                        <td>4.400.000</td>
+                        <td>3.900.000</td>
+                        <td>3900000</td>
+                    </tr> -->
+                </table>
+                
+            </div>
+    </div>
+    <!------------------------------------------ Modal them product ------------------------------------------->
+    <div class="modal-admin js-modal-admin">
+        <div class="modal-container-admin js-modal-container-admin">
+            <div class="modal-close-admin js-modal-close-admin"><i class="far fa-window-close"></i></div>
+            <header class="modal-header-admin" >
+                Thêm Sản Phẩm
+            </header>
+            
+            <div class="modal-body-admin">
+                 <label for="admin-id" class="modal-name-admin">ID</label>
+                 <input id="admin-id" type="text" class="modal-input-admin" value="" placeholder="Nhập ID sản phẩm">
+
+                 <label for="admin-name" class="modal-name-admin">Tên Sản Phẩm</label>
+                 <input id="admin-name" type="text" class="modal-input-admin" value="" placeholder="Nhập tên sản phẩm">
+
+                 <select name="select" id="admin-type">
+                    <option>Chọn thể loại</option>
+                     <option value="adidas">Adidas</option>
+                     <option value="puma">Puma</option>
+                     <option value="nike">Nike</option>
+                     <option value="guccis">Gucci</option>
+                 </select>
+
+                 <label class="modal-name-admin" for="admin-img">Hình Ảnh</label>
+                 <input type="url" id="admin-img" class="modal-input-admin" value="" placeholder="Nhập URL hình ảnh">
+
+                 <label for="admin-price1" class="modal-name-admin">Giá Gốc</label>
+                 <input id="admin-price1" type="text" class="modal-input-admin" value="" placeholder="Nhập giá gốc (vd:4.000.000)">
+                 
+                 <label for="admin-price2" class="modal-name-admin">Giá Sale</label>
+                 <input id="admin-price2" type="text" class="modal-input-admin" value="" placeholder="Nhập giá sale (vd:3.000.000)">
+                 
+                 <label for="admin-price3" class="modal-name-admin">Giá Sale</label>
+                 <input id="admin-price3" type="text" class="modal-input-admin" value="" placeholder="Nhập giá sale (vd:3000000)">
+
+                 <label for="admin-introduct" class="modal-name-admin">Giới Thiệu Sản Phẩm</label>
+                 <input id="admin-introduct" type="text" class="modal-input-admin" value="" placeholder="Mô tả sản phẩm">
+
+                 <button id="admin-them-product" onclick="createSanPhamAdmin()">Cập Nhật</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ---------------------------------------- Modal sua product ----------------------------------------- -->
+    <div class="modal-admin-sua " id="modal-admin-sua">
+        <div class="modal-container-admin-sua ">
+            <div class="modal-close-admin-sua " id="modal-admin-delete" onclick="hideSuaProduct()"><i class="far fa-window-close"></i></div>
+            <header class="modal-header-admin-sua" >
+                Thay Đổi Sản Phẩm
+            </header>
+            
+            <div class="modal-body-admin-sua">
+                 <label for="admin-id-sua" class="modal-name-admin-sua">ID</label>
+                 <input id="admin-id-sua" type="text" class="modal-input-admin-sua" value="" placeholder="Nhập ID sản phẩm">
+
+                 <label for="admin-name-sua" class="modal-name-admin-sua">Tên Sản Phẩm</label>
+                 <input id="admin-name-sua" type="text" class="modal-input-admin-sua" value="" placeholder="Nhập tên sản phẩm">
+
+                 <select name="select" id="admin-type-sua">
+                    <option>Chọn thể loại</option>
+                     <option value="adidas">Adidas</option>
+                     <option value="puma">Puma</option>
+                     <option value="nike">Nike</option>
+                     <option value="guccis">Gucci</option>
+                 </select>
+
+                 <label class="modal-name-admin-sua" for="admin-img-sua">Hình Ảnh</label>
+                 <input type="url" id="admin-img-sua" class="modal-input-admin-sua" value="" placeholder="Nhập URL hình ảnh">
+
+                 <label for="admin-price1-sua" class="modal-name-admin-sua">Giá Gốc</label>
+                 <input id="admin-price1-sua" type="text" class="modal-input-admin-sua" value="" placeholder="Nhập giá gốc (vd:4.000.000)">
+                 
+                 <label for="admin-price2-sua" class="modal-name-admin-sua">Giá Sale</label>
+                 <input id="admin-price2-sua" type="text" class="modal-input-admin-sua" value="" placeholder="Nhập giá sale (vd:3.000.000)">
+                 
+                 <label for="admin-price3-sua" class="modal-name-admin-sua">Giá Sale</label>
+                 <input id="admin-price3-sua" type="text" class="modal-input-admin-sua" value="" placeholder="Nhập giá sale (vd:3000000)">
+
+                 <label for="admin-introduct-sua" class="modal-name-admin-sua">Giới Thiệu Sản Phẩm</label>
+                 <input id="admin-introduct-sua" type="text" class="modal-input-admin-sua" value="" placeholder="Mô tả sản phẩm">
+
+                 <button id="admin-them-product-sua" onclick=" hoanthanhEditSanPhamAdmin(document.getElementById('admin-id-sua').value)">Cập Nhật</button>
+            </div>
+        </div>
+    </div>
+     <!-- -----------------------------------------javascript Modal Chi Tiêt San Pham------------------------------------------->
+     <div class="modal-admin-donhang " id="modal-admin-donhang">
+        <div class="modal-container-admin-donhang ">
+            <div class="modal-close-admin-donhang " id="modal-admin-delete" onclick=" hideXuatChiTietDonHang()"><i class="far fa-window-close"></i></div>
+            <header class="modal-header-admin-donhang" >
+                Chi Tiết Đơn Hàng
+            </header>
+
+            <table class="modal-body-admin-donhang" id="modal-body-admin-donhang">            
+                <tr>
+                    <td>Hình ảnh</td>
+                    <td>Tên giày</td>
+                    <td>Số lượng</td>
+                    <td>Tổng tiền</td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""></td>
+                    <td>Tên giày</td>
+                    <td>Số lượng</td>
+                    <td>Tổng tiền</td>
+                </tr>
+               
+            </table>
+        </div>
+     </div>
+     <!-- -----------------------------------------javascript Modal them product------------------------------------------->
+     <script>
+        const them=document.querySelector('.js-section-admin-them')
+        const modal=document.querySelector('.js-modal-admin')
+        const modalClose=document.querySelector('.js-modal-close-admin')
+        const modalContainer=document.querySelector('.js-modal-container-admin')
+        function showThemProduct()
+        {
+            modal.classList.add('open');
+        }
+
+        function hideThemProduct()
+        {
+            modal.classList.remove('open');
+        }
+
+        // for(const them of thems)
+        // {
+        //     them.addEventListener('click',showThemProduct);
+        // }
+
+        them.addEventListener('click',showThemProduct)
+
+        modalClose.addEventListener('click',hideThemProduct)
+
+        modal.addEventListener('click',hideThemProduct)
+
+        modalContainer.addEventListener('click' , function(event){
+        event.stopPropagation();
+        })
+    </script>
+    
+    <script>
+        function kt(type)
+        {
+          if(ktdangki() == false)
+            return false;
+          else
+            createnewuser();
+        }
+    </script>
+
+  
+        
+</body>
+</html>

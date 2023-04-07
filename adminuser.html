@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <script src="js/admin.js"></script>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <script>    
+        window.onload =function()
+        {
+            showUserList();
+             createAdmin();
+        }
+    </script>
+    <h1>Quản lý User</h1>
+
+    <input id="nameregister" value="" type="text" class="login-input-field" placeholder="Tên tài khoản">
+    <input id="sdtregister" value="" type="text" class="login-input-field" placeholder="Số điện thoại">
+    <input id="addressregister" value="" type="text" class="login-input-field" placeholder="Địa chỉ">
+    <input id="userregister" value="" type="text" class="login-input-field" placeholder="Tài khoản">
+    <input id="passregister" value="" type="password" class="login-input-field" placeholder="Mật khẩu">
+    
+    <!-- <input id="pass"  value="" type="password" class="login-input-field" placeholder="Mật khẩu lại"> -->
+    <button id="showuser" onclick="createnewuser()" class="login-submit">Thêm </button>
+
+    
+    <div id="searchuser"></div>
+    <table id="userlist"></table>
+    
+    
+</body>
+</html>

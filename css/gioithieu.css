@@ -1,0 +1,112 @@
+.margin-chung{
+    margin: 0 100px;
+}
+.canhDeuLe{
+    text-align: justify;
+}
+.introduce{
+    position: relative;
+}
+.introduce-section-header{
+    padding: 40px 0;
+    height: 250px;
+    margin: 0 100px;
+}
+   
+.introduce-header {
+    background: #f5f4f7;
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    top: 130px;
+}
+.introduce-header-title {
+    border-bottom: 1px solid #CCC;
+    margin-right: 300px;
+    box-sizing: border-box;
+}
+.introduce-header-left {
+    float: left;
+    width: 70%;
+}
+.introduce-header-right {
+    float: right;
+    width: 30%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.introduce-header-right-name {
+    font-size: 25px;
+    width: 170px;
+    height: 170px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 180px;
+    background: #f68122;
+    box-shadow: 0 0 20px 10px #ccc;
+    border-radius: 50%;
+    color: #fff;
+}
+.introduce-header-work{
+    font-size: 15px
+}
+.introduce-body {
+    position: absolute;
+    top: 415px;
+}
+.introduce-body-header h2{
+    text-align: center;
+}
+.introduce-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.introduce-container .introduce-card{
+    position: relative ;
+    max-width: 300px;
+    height: 215px;
+    background: floralwhite;
+    margin: 100px 20px;
+    padding: 20px 32px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+.introduce-container .introduce-card:hover{
+    height: 420px;
+}
+.introduce-container .introduce-card .imgbx {
+    position: relative;
+    width: 240px;
+    height: 245px;
+    top: -60px;
+    left: 0px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgb(0 0 0  0.5);
+}
+.introduce-container .introduce-card .imgbx img{
+    max-width: 100%;
+    border-radius: 4px;
+     /* margin-left: -16px; */
+    width: 240px;
+    height: 245px;
+}
+.introduce-container .introduce-card .introduce-content{
+    position: relative;
+    margin-top: -140px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.introduce-container .introduce-card:hover .introduce-content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}

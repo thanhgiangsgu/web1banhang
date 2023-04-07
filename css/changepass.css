@@ -1,0 +1,78 @@
+
+
+.changepass-container
+{
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.changepass-container .group-left
+{
+    float: left;
+    width: 25%;
+}
+
+.changepass-container .group-left .group-left-item
+{
+    margin: 20px 0;
+}
+
+.changepass-container .divider
+{
+    border-bottom: 3px solid #333;
+    width: 20%;
+}
+
+.changepass-container .group-left .group-left-item a
+{
+    text-decoration: none;
+    color: #333;
+}
+
+.changepass-container .group-left .group-left-item a:hover
+{
+    color: blue;
+}
+
+.changepass-container .group-right
+{
+    width: 50%;
+    text-align: left;
+}
+
+.changepass-container .group-right .group-right-item
+{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.changepass-container .divider-1
+{
+    border-bottom: 3px solid #333;
+    width: 20%;
+}
+
+.changepass-container .group-right-item input
+{
+    width: 80%;
+}
+
+.changepass-container .group-right-item button
+{
+    width: 80%;
+    text-align: center;
+    font-size: 25px;
+    background:cornflowerblue;
+}
+
+.eye
+{
+    position: absolute;
+}
+
+#hide1
+{
+    display: none;
+}
+

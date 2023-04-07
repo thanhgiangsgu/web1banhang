@@ -1,0 +1,28 @@
+.container-complete
+{
+    padding-top: 200px;
+    margin: 2px auto;
+    width: 60%;
+    font-family: GeometricExtraBold;
+}
+
+.box-completes
+{
+    border: 1px solid #333;
+    border-radius: 20px;
+}
+
+.box-complete1
+{
+    text-align: center;
+}
+
+.back-product-btn
+{
+    display: block;
+    margin: 10px auto;
+    height: 50px;
+    width: 200px;
+    background: #f15e2c;
+    color: aliceblue;
+}

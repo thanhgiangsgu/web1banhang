@@ -1,0 +1,82 @@
+.slidershow
+{
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    height: 850px;
+    overflow: hidden;
+}
+
+.navigation
+{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar 
+{
+    width: 50px;
+    height: 10px;
+    border: 2px solid red;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.bar:hover
+{
+  background-color: #fff;
+}
+
+input[name="radio-btn"]
+{
+    position: absolute;
+    visibility: hidden;
+}
+.slides
+{
+    width: 500%;
+    height: 100%;   
+    display: flex;
+}
+
+.slide input
+{
+  display: none;
+}
+
+.slide
+{
+    width: 20%;
+    transition: 0.6s;
+}
+
+.slide img
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+#radio1:checked ~ .s1
+{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .s1
+{
+    margin-left: -20%;
+   
+}
+
+#radio3:checked ~ .s1
+{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .s1
+{
+    margin-left: -60%;
+}

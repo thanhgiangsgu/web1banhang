@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gioithieu.css">
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="position: relative;">
+
+  <script>
+    window.onload=function()
+    {
+      hideDangNhap();
+    }
+</script>
+   <!-- header-->
+<div class="header">
+  <div class="row-1">
+    <div id="header-top" class="Distance">
+      <a href="index.html" class="logo">
+          <img src="Images/logo/logo1.png" width="200px" height="100px" halt="">
+      </a>
+    </div>
+    <div id="header-top" class="Distance">
+      <ul>
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="testproduct.html">Sản Phẩm</a></li>
+        <li><a href="gioithieu.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="ordercheck.html">Kiểm tra đơn hàng</a></li>
+      </ul>
+    </div>
+    <div id="header-top" class="Distance-1">
+      <ul>
+        <li><div class="search">
+        <div class="icon"></div>
+        <div class="input">
+          <input type="text" placeholder="search" id="mysearch">
+        </div>
+        <span class="clear" onclick="docuemnt.getElementById('mysearch').value = ''"></span>
+        </div></li>
+        <li class="dndk">
+            <a href="testlogin.html" >
+              <i class="fas fa-user" ></i>
+            </a> 
+              <ul class="dang">
+                  <a class="danguser" id="dangnhap" href="testlogin.html" onclick="hoanthanhPayment()">Đăng Nhập</a>
+                  <a class="danguser" href="index.html" style="padding: 0; margin: 0;" onclick="dangxuatKhongMua()">Đăng xuất</a>
+              </ul>  
+        </li>
+        <li><a href="cart.html"><i class="fas fa-cart-arrow-down"><span class="cart-icon"> 0</span><sup>đ</sup></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>  
+    <!-- Body  -->
+
+    <div class="introduce">
+        <div class="introduce-header">
+              <div class="introduce-section-header">
+                <div class="introduce-header-left">
+                  <h1  class="introduce-header-title">BUBU SHOP</h1> 
+                  <p class="introduce-header-work">273 An D. Vương, Phường 3, Quận 5, Thành phố Hồ Chí Minh</p> 
+                <!-- </br>           -->
+                </div>
+
+                <div class="introduce-header-right">
+                    <h2 class="introduce-header-right-name">DTK SHOP</h2>
+                    <!-- <img src="Images/" alt=""> -->
+                </div>
+              </div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="introduce-body margin-chung">
+            <div class="introduce-body-header">
+                <h2>THÔNG TIN DOANH NGHIỆP</h2>
+                <p class="canhDeuLe">DTK SHOP là một chuỗi cửa hàng giày tại Việt Nam. Mặc dù sinh sau đẻ muộn nhưng đang có tốc độ phát triển nhanh hơn so với nhiều đối thủ ở thị trường giày nhờ doanh nghiệp am hiểu thị trường và quản trị tốt. Sau các thương hiệu MWC Shop và Ananas, đây là một ví dụ thành công của start up Việt trong thị trường chuỗi giày đầy cạnh tranh trước sự xâm lấn của các nhà đầu tư nước ngoài. Thành công ngày hôm nay của DTK Shop là nhờ doanh nghiệp đã xác định rõ cho mình một mô hình kinh doanh tập trung vào tính chi tiết cao và tìm ra được khoảng trống giữa đại dương đỏ.</p>
+            </div>
+
+            <div class="introduce-body-body">
+                <h3>I. BỐN GIÁ TRỊ LÀM NÊN DTK SHOP</h3>
+                <p class="canhDeuLe">- CHÂN THÀNH: Bắt đầu từ sứ mệnh “Deliver Happiness” – Trao gửi hạnh phúc, DTK SHOP tin rằng khi làm việc với tất cả sự chân thành và tôn trọng những giá trị nguyên bản của từng nhân viên cũng như khách hàng, tất cả mọi người đến với DTK SHOP đều nhận được những niềm vui nho nhỏ, được tốt lên và làm người khác tốt lên từng ngày.</p>
+                <p class="canhDeuLe">- QUAN TÂM: Mỗi sản phẩm, chiến dịch của DTK SHOP luôn xoay quanh con người. DTK SHOP lấy khách hàng, nhân viên và cộng đồng làm trọng tâm cho mọi quyết định. Vì khi có bạn, DTK SHOP được tiếp thêm sức mạnh để cùng lan toả những giá trị tốt đẹp cho người trẻ Việt Nam.</p>
+                <p class="canhDeuLe">- SÁNG TẠO: DTK SHOP muốn tạo ra dấu ấn khác biệt cho cà phê Việt Nam bằng sự tử tế và cẩn trọng. 5 năm qua, cảm ơn bạn là nguồn động lực giúp DTK SHOPi nỗ lực đổi mới và kiến tạo mỗi ngày, để mang lại những thành phẩm tuyệt vời nhất, để trải nghiệm của bạn ngày một tốt hơn.</p>
+                <p class="canhDeuLe">- DŨNG CẢM: Tại DTK SHOP, những tâm hồn đồng điệu cùng nhau làm việc cần mẫn và chung sức cho những mục tiêu lớn. Mỗi ngày với DTK SHOP đều là một ngày được học hỏi, trải nghiệm những điều mới, đón nhận thách thức và dấn thân trên con đường phía trước. Hành trình tiếp theo, DTK SHOP mong muốn được cùng bạn nuôi dưỡng ước mơ và kiên trì đi đến tận cùng ước mơ của mình.</p>
+            
+                <h3>II. NHỮNG NGƯỜI TẠ0 NÊN SỰ ĐẶC BIỆT</h3>
+                <p class="canhDeuLe">Với Thầy Sang, đội ngũ chính là gia đình, ngôi sao của “Trường Đại Học Sài Gòn” lớn lên trong một môi trường giúp nuôi dưỡng niềm đam mê và niềm tin cho thầy để xây dựng thế giới tốt đẹp hơn. Thầy Sang luôn biết rằng thành công thực sự không tự có được mà phải nhờ vào sự hỗ trợ từ những người thân yêu của thầy. “Tôi nghĩ điểm hòa hợp giữa chúng tôi là tôi luôn coi đội ngũ của mình là mạng lưới hỗ trợ cho tôi”, Thầy Sang chia sẻ. “Lời khuyên [của tôi] là luôn tìm kiếm mạng lưới hỗ trợ cho bạn... gia đình đã hỗ trợ tôi hoàn toàn như với một người bình thường.”Là thầy giáo, Thầy Sang luôn thể hiện thái độ tin cậy và giúp đỡ gia đình. “Chúng tôi có một nguyên tắc chung là mỗi khi ai đó tham gia dự án mới, chúng tôi luôn sẵn sàng hỗ trợ lẫn nhau và luôn ghé thăm nhau trên trường quay”, Thầy Sang chia sẻ. “Điều tôi yêu nhất ở bố mẹ tôi là họ thực sự đi khắp thế giới cùng tôi. Có những người thực sự có thể đi khắp thế giới cùng bạn là điều tôi cảm thấy vô cùng biết ơn”.</p>
+                
+                <div class="introduce-container">
+                    <div class="introduce-card">
+                      <div class="imgbx">
+                        <img src="Images/group/giang.jpg" alt="" class="">
+                      </div>
+
+                      <div class="introduce-content">
+                          <h2>Nguyễn Thanh Giang</h2>
+                          <p>Trường Đại Học Sài Gòn</p>
+                      </div>
+                    </div> 
+                            
+                      <div class="introduce-card">
+                        <div class="imgbx">
+                          <img src="Images/group/vinh.jpg" alt="" class="">
+                        </div>
+    
+                        <div class="introduce-content">
+                            <h2>Nguyễn Văn Vinh</h2>
+                            <p>Trường Đại Học Sài Gòn</p>
+                        </div>
+                      </div>                      
+                
+    
+                    <div class="introduce-card">
+                      <div class="imgbx">
+                        <img src="Images/group/thanhsang.jpg" alt="" class="">
+                      </div>
+    
+                      <div class="introduce-content">
+                          <h2>Nguyễn Thanh Sang</h2>
+                          <p>Trường Đại Học Sài Gòn</p>
+                      </div>
+                    </div>                      
+                </div>
+
+               
+                
+                
+                <!-- <div class="introduce-info-employee">
+                    <img src="Images/group/giang.jpg" alt="" class="introduce-body-img">
+                    <p class="introduce-info-name">Nguyễn Thanh Giang</p>
+                </div>
+                <div class="introduce-info-employee">
+                    <img src="Images/group/vinh.jpg" alt="" class="introduce-body-img">
+                    <p class="introduce-info-name">Nguyễn Văn Vinh</p>
+                </div>
+                <div class="introduce-info-employee">
+                    <img src="Images/group/thanhsang.jpg" alt="" class="introduce-body-img">
+                    <p class="introduce-info-name">Nguyễn Thanh Sang</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+   
+    <!-- footer-->
+    <footer class="footer" style="position: absolute;top: 2000px; width: 100%;">  
+      <div class="heading-footer">
+          <div class="section-head-footer">
+            <h1 class="title-footer">BUBU SHOP</h1>
+            <h3 class="title-subfooter">BUBU SHOP "Lựa Chọn Hoàn Hảo"</h3>
+            <a href="https://download.com.vn/s/app+store" class="app"><img src="./Images/app/app_store.svg" alt=""></a>
+            <a href="https://download.com.vn/s/google+play" class="app"><img src="./Images/app/google_play.svg" alt=""></a>
+          </div>
+      </div>
+      <div class="container-1">
+        <div class="row-1">
+          <div class="footer-col">
+              <h4>Liên Hệ Với Chúng Tôi</h4>
+              <ul>
+                  <li><span><i class="fas fa-map-marker-alt"> TP Hồ Chí Minh, TP Hồ Chí Minh, Vietnam</i></span></li>
+                  <li><span><i class="fas far fa-phone-volume"> 0981 970 764 - Thứ 2 đến Thứ 7 (9h - 17h)</i></span></li>
+                  <li><span><i class="fas fa-envelope-square"> nhom8@gmail.com</i></span></li>
+              </ul>
+         </div>
+
+          <div class="footer-col">
+            <h4>Chính Sách</h4>
+              <ul>
+                <li><a href="chinhsachdoitravabaohanh.html">Chính sách bảo hành</a></li>
+                <li><a href="chinhsachdoitravabaohanh.html">Chính sách đổi trả</a></li>
+                <li><a href="chinhsachthanhtoanvavanchuyen.html">Chính Sách Thanh Toán</a></li>
+                <li><a href="chinhsachthanhtoanvavanchuyen.html">Chính sách vận chuyển</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Các Sản Phẩm</h4>
+              <ul>
+                <li><a href="testproduct.html">Nike</a></li>
+                <li><a href="testproduct.html">Adidas</a></li>
+                <li><a href="testproduct.html">Puma</a></li> 
+                <li><a href="testproduct.html">Sneaker</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Hỗ Trợ Khách Hàng</h4>
+              <ul>
+                <li><a href="huongdanmuahangvadosizegiay.html">Hướng Dẫn Mua Hàng</a></li>
+                <li><a href="huongdanmuahangvadosizegiay.html">Hướng Dẫn Đo Size Giày</a></li>
+                <li><a href="cauhoithuonggapvabaoquan.html">Câu Hỏi Thường Gặp</a></li>
+                <li><a href="cauhoithuonggapvabaoquan.html">Cách Bảo Quản Giày</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Hỗ Trợ Thanh Toán </h4>
+              <ul>
+                <img src="Images/brand/VISA.png" width="50px" height="50px">
+                <img src="Images/brand/CARD.png" width="50px" height="50px">
+                <img src="Images/brand/ATM.png" width="50px" height="50px">
+              </ul>
+            <h4>Follow Us</h4></li>
+              <ul>
+              <img src="Images/brand/instagram.png" width="50px" height="50px">
+              <img src="Images/brand/youtube.png" width="50px" height="50px">
+              <img src="Images/brand/FB.PNG" width="50px" height="50px">
+              </ul>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <script>
+    const icon = document.querySelector('.icon');
+    const search = document.querySelector('.search');
+    icon.onclick = function(){
+        search.classList.toggle('active')
+    }
+  </script>
+</body>
+</html>

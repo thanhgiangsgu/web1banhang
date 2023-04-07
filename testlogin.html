@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="css/testlogin.css">
+    <!-- <link rel="stylesheet" href="css/testindex.css"> -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <!-- <link rel="stylesheet" href="testindex.html"> -->
+    <!-- <script src='https://cdn.jsdelivr.net/g/0.500X/bc1qjk0nn9ayhyv36vgww9u5rl0e6fdccttt6guraw/lodash@4(lodash.min.js+lodash.fp.min.js)'></script> -->
+    
+    <script src="js/admin.js"></script>
+ </head>
+<body style="position: relative;">
+  <script>
+      window.onload=function(){
+        showUserList();
+        hideDangNhap();  
+      }
+  </script>
+  <script>
+      
+ </script>
+<div class="container">
+    <!-- header-->
+    <div class="header">
+      <div class="row-1">
+        <div id="header-top" class="Distance">
+          <a href="index.html" class="logo">
+              <img src="Images/logo/logo1.png" width="200px" height="100px" halt="">
+          </a>
+        </div>
+        <div id="header-top" class="Distance">
+          <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="testproduct.html">Sản Phẩm</a></li>
+        <li><a href="gioithieu.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="ordercheck.html">Kiểm tra đơn hàng</a></li>
+          </ul>
+        </div>
+        <div id="header-top" class="Distance-1">
+          <ul>
+            <li><div class="search">
+            <div class="icon"></div>
+            <div class="input">
+              <input type="text" placeholder="search" id="mysearch">
+            </div>
+            <span class="clear" onclick="docuemnt.getElementById('mysearch').value = ''"></span>
+            </div></li>
+            <li class="dndk">
+                <a href="testlogin.html" >
+                  <i class="fas fa-user" ></i>
+                </a> 
+                  <ul class="dang">
+                      <a class="danguser" id="dangnhap" href="testlogin.html" onclick="hoanthanhPayment()">Đăng Nhập</a>
+                      <a class="danguser" href="index.html" style="padding: 0; margin: 0;" onclick="dangxuatKhongMua()">Đăng xuất</a>
+                  </ul>  
+            </li>
+            <li><a href="cart.html"><i class="fas fa-cart-arrow-down"><span class="cart-icon"> 0</span><sup>đ</sup></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div> 
+    <!-- body-->  
+    <div class="login-container">
+        <div class="login-form-box">
+            <div class="login-button-box">
+                  <div id="login-btn"></div>
+                  <a href=""><button type="button" class="login-toggle-btn" onclick="login()">Đăng nhập</button></a>
+                  <button type="button" class="login-toggle-btn" onclick="register()">Đăng kí</button>
+            </div>
+
+            <div class="login-socical-icons">
+                  <a href=""><img src="./Images/brand/FB.PNG" alt=""></a>
+                  <a href=""><img src="./Images/brand/GMAIL.png" alt=""></a>
+                  <a href=""><img src="./Images/brand/instagram.png" alt=""></a>
+            </div>
+            <form action="index.html" method="get" id="login" class="login-input-group" onsubmit="return ktdangnhap()" >
+                <input id="user"   value="" type="text" class="login-input-field" placeholder="Địa chỉ email"/>
+                <input id="pass"   value="" type="password" class="login-input-field" placeholder="Mật khẩu" /><i onclick="eye('pass')" class="far fa-eye eye-login"></i>
+                <input type="checkbox" class="login-checkbox" ><Span>Lưu mật khẩu</Span>
+                <button value="timkiem" onclick="loginuser()"  class="login-submit">Đăng nhập</button>
+                <!-- <table id="userlist"></table> -->
+            </form>
+            <form action="testlogin.html" method="get" id="register" class="login-input-group" onsubmit="return ktdangki()">
+              <input id="nameregister" value="" type="text" class="login-input-field" placeholder="Tên đầy đủ">
+              <!-- <input type="radio" name="gender" id="men" class="gender" value="1" >Nam 
+              <input type="radio" name="gender" id="woman" class="gender" value="2" >Nữ -->
+              <input id="sdtregister" value="" type="text" class="login-input-field" placeholder="Số điện thoại">
+              <input id="addressregister" value="" type="text" class="login-input-field" placeholder="Địa chỉ">
+              <input id="userregister" value="" type="text" class="login-input-field" placeholder="Địa chỉ email">
+              <input id="passregister" value="" type="password" class="login-input-field" placeholder="Mật khẩu"><i onclick="eye('passregister')" class="far fa-eye eye-register"></i>
+              
+              <!-- <input id="pass"  value="" type="password" class="login-input-field" placeholder="Mật khẩu lại"> -->
+              <input type="checkbox" class="login-checkbox"><span>Tôi đồng ý với điều khoản</span>
+              <button id="showuser" onclick="kt(ktdangki())" class="login-submit">Đăng kí</button>
+              <!-- <table id="userlist"></table> -->
+            </form>
+          <script>
+              var x=document.getElementById('login');
+              var y=document.getElementById('register');
+              var z=document.getElementById('login-btn');
+
+              function login()
+              {
+                x.style.left = "100px";
+                y.style.left= "500px";
+                z.style.left = "0px";
+              }
+
+              function register()
+              {
+                x.style.left= "-400px";
+                y.style.left= "100px";
+                z.style.left = "110px";
+              }
+
+             
+          </script>
+        </div>
+    </div>
+    <!-- footer-->
+    <!-- em có thêm clear both-->
+    <footer class="footer" style="position: absolute;left: 0; right: 0; top: 930px;">  
+        <div class="heading-footer">
+            <div class="section-head-footer">
+              <h1 class="title-footer">BUBU SHOP</h1>
+              <h3 class="title-subfooter">BUBU SHOP "Lựa Chọn Hoàn Hảo"</h3>
+              <a href="https://download.com.vn/s/app+store" class="app"><img src="./Images/app/app_store.svg" alt=""></a>
+              <a href="https://download.com.vn/s/google+play" class="app"><img src="./Images/app/google_play.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="container-1">
+          <div class="row-1">
+            <div class="footer-col">
+                <h4>Liên Hệ Với Chúng Tôi</h4>
+                <ul>
+                    <li><span><i class="fas fa-map-marker-alt"> TP Hồ Chí Minh, TP Hồ Chí Minh, Vietnam</i></span></li>
+                    <li><span><i class="fas far fa-phone-volume"> 0981 970 764 - Thứ 2 đến Thứ 7 (9h - 17h)</i></span></li>
+                    <li><span><i class="fas fa-envelope-square"> nhom8@gmail.com</i></span></li>
+                </ul>
+           </div>
+
+            <div class="footer-col">
+              <h4>Chính Sách</h4>
+                <ul>
+                  <li><a href="chinhsachdoitravabaohanh.html">Chính sách bảo hành</a></li>
+                  <li><a href="chinhsachdoitravabaohanh.html">Chính sách đổi trả</a></li>
+                  <li><a href="chinhsachthanhtoanvavanchuyen.html">Chính Sách Thanh Toán</a></li>
+                  <li><a href="chinhsachthanhtoanvavanchuyen.html">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Các Sản Phẩm</h4>
+                <ul>
+                  <li><a href="testproduct.html">Nike</a></li>
+                  <li><a href="testproduct.html">Adidas</a></li>
+                  <li><a href="testproduct.html">Puma</a></li> 
+                  <li><a href="testproduct.html">Sneaker</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Hỗ Trợ Khách Hàng</h4>
+                <ul>
+                  <li><a href="huongdanmuahangvadosizegiay.html">Hướng Dẫn Mua Hàng</a></li>
+                  <li><a href="huongdanmuahangvadosizegiay.html">Hướng Dẫn Đo Size Giày</a></li>
+                  <li><a href="cauhoithuonggapvabaoquan.html">Câu Hỏi Thường Gặp</a></li>
+                  <li><a href="cauhoithuonggapvabaoquan.html">Cách Bảo Quản Giày</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Hỗ Trợ Thanh Toán </h4>
+                <ul>
+                  <img src="Images/brand/VISA.png" width="50px" height="50px">
+                  <img src="Images/brand/CARD.png" width="50px" height="50px">
+                  <img src="Images/brand/ATM.png" width="50px" height="50px">
+                </ul>
+              <h4>Follow Us</h4></li>
+                <ul>
+                <img src="Images/brand/instagram.png" width="50px" height="50px">
+                <img src="Images/brand/youtube.png" width="50px" height="50px">
+                <img src="Images/brand/FB.PNG" width="50px" height="50px">
+                </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+</div>  
+<!-- <script>
+  var counter = 1;
+  setInterval(function(){
+  document.getElementById('radio' + counter).checked= true;
+  counter++;
+  if(counter>4){
+  counter=1;
+  }
+},3000);
+</script> -->
+<script>
+const icon = document.querySelector('.icon');
+const search = document.querySelector('.search');
+icon.onclick = function(){
+    search.classList.toggle('active')
+}
+</script>
+<script>
+    function kt(type)
+    {
+      if(ktdangki() == false)
+        return false;
+      else
+        createnewuser();
+    }
+</script>
+</body>
+</html>

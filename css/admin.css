@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.wrapper-admin{
+    width: 100%;
+    min-height: 800px;
+    background: url(/Mau/Mau/Images/admin/admin.jpg) no-repeat center/ cover;
+    position: relative;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+.section-admin {
+    height: 300px;
+    width: 20%;
+    min-width: 250px;
+    background: #fff;
+    border-radius: 20px;
+    margin: 5px;
+}
+.header-admin {
+    font-size: 25px;
+    width: 200px;
+    background: linear-gradient(to top, #7a46cf, #9099f4);
+    border-radius: 20px;
+    padding: 6px;
+    text-align: center;
+    margin: 5px auto;
+}
+.body-admin {
+   margin: 10px;
+    font-size: 18px;
+}
+.link-admin {
+    display: block;
+}
+.link-admin:hover {
+    transform: scale(1.1);
+}
+#userlist td{
+    border: 1px solid #000;
+    padding: 5px;         
+}
+#userlist td::after{
+    content: "";
+    text-align: center;
+}
+#section-search{
+    margin-bottom: 10px;
+    display: block;
+}
+#userlist{
+    width: 100%;
+    background-color: #fff
+}
+.section-admin-list{
+    width: 100%;
+    margin: 5px;
+    position: relative;
+}
+.section-admin-them {
+    display: inline-block;
+    background: antiquewhite;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.delete {
+    padding: 0 5px;
+}
+.section-admin-title {
+    font-size: 30px;
+    background: antiquewhite;
+    margin-bottom: 5px;
+    display: inline-block;
+    padding: 10px;
+}
+.admin-img{
+    width: 60px;
+}
+
+/*----------------------- Modal admin Them Product  ----------------------- */
+i:hover {
+    color: rgb(241, 144, 33);
+}
+.modal-admin {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-admin.open{
+    display: block;
+}
+.modal-container-admin {
+    width: 500px;
+    height: 600px;
+    background: #fff;
+    position: relative;
+}
+.modal-close-admin{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+}
+.modal-header-admin {
+    font-size: 30px;
+    border-bottom: 1px solid #e9ecef;
+    margin: 10px;
+    padding-bottom: 5px;
+}
+.modal-body-admin {
+    padding: 0 35px;
+    font-size: 22px;
+}
+#admin-type {
+    display: block;
+    padding: 10px;
+    margin: 5px 0px;
+}
+.modal-name-admin {
+    display: block;
+}
+.modal-input-admin {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 15px;
+    outline: none;
+}
+#admin-them-product {
+    padding: 5px;
+    border-radius: 10px;
+    background: #66ccff;
+    cursor: pointer;
+}
+/*------------------ Modal admin Sua -----------------*/
+button
+{
+    cursor: pointer;
+}
+i:hover {
+    color: rgb(241, 144, 33);
+}
+.modal-admin-sua {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-admin-sua.open{
+    display: flex;
+}
+.js-modal-admin.open{
+    display: flex;
+}
+.modal-container-admin-sua {
+    width: 500px;
+    height: 600px;
+    background: #fff;
+    position: relative;
+}
+.modal-close-admin-sua{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+}
+.modal-header-admin-sua {
+    font-size: 30px;
+    border-bottom: 1px solid #e9ecef;
+    margin: 10px;
+    padding-bottom: 5px;
+}
+.modal-body-admin-sua {
+    padding: 0 35px;
+    font-size: 22px;
+}
+#admin-type-sua {
+    display: block;
+    padding: 10px;
+    margin: 5px 0px;
+}
+.modal-name-admin-sua {
+    display: block;
+}
+.modal-input-admin-sua {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 15px;
+    outline: none;
+}
+#admin-them-product-sua {
+    padding: 5px;
+    border-radius: 10px;
+    background: #66ccff;
+    cursor: pointer;
+}
+/*------------------ Modal admin Quan lý đơn hàng-----------------*/
+.modal-admin-donhang {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container-admin-donhang{
+    width: 500px;
+    height: 600px;
+    background: #fff;
+    position: relative;
+}
+.modal-close-admin-donhang{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+}
+.modal-header-admin-donhang {
+    font-size: 30px;
+    border-bottom: 1px solid #e9ecef;
+    margin: 10px;
+    padding-bottom: 5px;
+}
+.modal-body-admin-donhang{
+    padding: 0 35px;
+    font-size: 15px;
+  
+}
+#modal-body-admin-donhang tr td{
+    border: 1px solid #000;
+    padding: 1px 5px;
+}
+#modal-body-admin-donhang img{
+    width: 50px;
+}

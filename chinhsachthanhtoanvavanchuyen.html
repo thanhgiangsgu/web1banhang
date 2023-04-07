@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" style="position: relative;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/chinhsachthanhtoanvavanchuyen.css">
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <script src="js/admin.js"></script>
+</head>
+<body>
+  <script>
+    window.onload=function()
+    {
+      hideDangNhap();
+    }
+</script>
+
+  <div class="container" style="position: absolute;">
+    <!-- header-->
+    <div class="header">
+      <div class="row-1">
+        <div id="header-top" class="Distance">
+          <a href="index.html" class="logo">
+              <img src="Images/logo/logo1.png" width="200px" height="100px" halt="">
+          </a>
+        </div>
+        <div id="header-top" class="Distance">
+          <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="testproduct.html">Sản Phẩm</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="ordercheck.html">Kiểm tra đơn hàng</a></li>
+          </ul>
+        </div>
+        <div id="header-top" class="Distance-1">
+          <ul>
+            <li><div class="search">
+            <div class="icon"></div>
+            <div class="input">
+              <input type="text" placeholder="search" id="mysearch">
+            </div>
+            <span class="clear" onclick="docuemnt.getElementById('mysearch').value = ''"></span>
+            </div></li>
+            <li class="dndk">
+                <a href="testlogin.html" >
+                  <i class="fas fa-user" ></i>
+                </a> 
+                  <ul class="dang">
+                      <a class="danguser" id="dangnhap" href="testlogin.html" onclick="hoanthanhPayment()">Đăng Nhập</a>
+                      <a class="danguser" href="index.html" style="padding: 0; margin: 0;" onclick="dangxuatKhongMua()">Đăng xuất</a>
+                  </ul>  
+            </li>
+            <li><a href="cart.html"><i class="fas fa-cart-arrow-down"><span class="cart-icon"> 0</span><sup>đ</sup></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div> 
+    <!-- body-->  
+    <div id="wrapper-section">
+        <div id="wrapper-heading">
+          <div class="head">
+              <h2 class="section-heading">CHÍNH SÁCH THANH TOÁN & VẬN CHUYỂN</h2>
+          </div>
+        </div>
+
+        <div class="mid">
+            <h2>CHÍNH SÁCH THANH TOÁN</h2>
+          
+            <br /><hr/> <br/>
+            <h3 style="margin-bottom: 15px;">1.Hướng dẫn thanh toán:</h3>
+            <ul class="word">
+              <li>- B1: Sau khi đã đặt hàng trên Website chính thức của FILA Việt Nam hoặc Fanpage sẽ được mã đơn hàng.</li>
+              <li>- B2: Nhân viên chúng tôi sẽ liên hệ với quý khách hàng trong thời gian sớm nhất để xác nhận đơn hàng và tình trạng size của quý khách đã đặt có còn hàng sẵn tại kho ở Việt Nam hay không.</li>
+              <li>- B3: Nếu còn sẽ ship Cod tận nơi ( Nhận hàng rồi mới thanh toán ) theo phí ship đã ghi rõ trên đơn hàng đặt trên Website.</li>
+              <li>- B4: Nếu nhân viên báo hết size tại Việt Nam thì sẽ hướng dẫn khách hàng order từ Hàn Quốc về và cọc trước 50% giá trị đơn hàng vào số tài khoản ngân hàng của FILA Việt Nam. Sau khi đã nhận được thông tin chuyển khoảng sẽ báo bên Hàn Quốc chuyển về Việt Nam trong khoảng 3-5 ngày ( Tùy vào tình trạng vận chuyển có thể về sớm hơn hoặc muộn hơn dự kiến một chút ).</li>
+              <li>- B5: Hàng về Việt Nam được ship tận nơi như địa chỉ khi khách đặt hàng trên Website hoặc Fanpage. Quý khách hàng nhận hàng và thanh toán hết 50% còn lại của đơn hàng.</li>
+            </ul>
+            <h3 style="margin: 15px 0;">2.Lưu ý:</h3>
+            <ul class="word">
+              <li>- B4 và B5 chỉ làm đối với nhưng đơn hàng nào nhận viên xác nhận báo hết size và sẽ được Order theo hướng dẫn của nhân viên.</li>
+              <li>- Mọi thắc mắc xin liên hệ về trang Fanpage chính thức và duy nhất của chúng tôi: https://www.facebook.com/www.filavietnam.vn/</li>
+              <li>- Hoặc gọi vào hotline: 0981 970 764</li>
+              <li>- Website: https://dincoxvietnam.vn/</li>
+            </ul>
+
+           <h2>CHÍNH SÁCH VẬN CHUYỂN</h2>
+           <br /><hr/> <br/>
+           <h3 style="margin-bottom: 15px;">1.Hướng dẫn vận chuyển:</h3>
+           <ul class="word">
+             <li>- Tất cả các đơn hàng khi được ship đi đều được đóng gói thao chuẩn Double ( Nghĩa là thùng Carton bên ngoài bao bọc lấy hộp giày ) nhằm đảm bảo hộp giày và sản phẩm bên trong đều trong tình trạng an toàn -> đảm bảo quyền lợi cho quý khách hàng.</li>
+             <li>- Phí vận chuyển cho đơn hàng đi các thành phố và các tỉnh cụ thể như sau:</li>
+                <li style="padding-left: 20px;">+ Tp. Hồ Chí Minh: 20.000 Vnđ/1 đơn hàng.</li>
+                <li style="padding-left: 20px;">+ Hà Nội: 30.000 Vnđ/ 1 đơn hàng.</li>
+                <li style="padding-left: 20px;">+ Các tỉnh và thành phố khác: 40.000 Vnđ/1 đơn hàng.</li>
+             <li>- Thời gian kể từ lúc đặt hàng cho đến lúc nhận được hàng: </li> <li style="padding-left: 20px;">+ Tp. Hồ Chí Minh: 20.000 Vnđ/1 đơn hàng.</li>
+                <li style="padding-left: 20px;">+ Đối với hàng sẵn: Khoảng 1-4 ngày toàn quốc.</li>
+                <li style="padding-left: 20px;">+ Đối với đơn hàng Order Hàn Quốc: Khoảng 4-6 ngày.</li>
+                
+           </ul>
+           <h3 style="margin: 15px 0;">2.Lưu ý:</h3>
+           <ul class="word">
+             <li>- Mọi thắc mắc xin liên hệ về trang Fanpage chính thức và duy nhất của chúng tôi: https://www.facebook.com/www.dincoxvietnam.vn/</li>
+             <li>- Hoặc gọi vào hotline: 0981 970 764</li>
+             <li>- Website: https://dincoxvietnam.vn/</li>
+           </ul>
+
+        </div>        
+    </div>
+    <!-- footer-->
+    <!-- em có thêm clear both-->
+    <footer class="footer">  
+      <div class="heading-footer">
+        <div class="section-head-footer">
+          <h1 class="title-footer">BUBU SHOP</h1>
+          <h3 class="title-subfooter">BUBU SHOP "Lựa Chọn Hoàn Hảo"</h3>class="title-subfooter">DKT SHOP "Lựa Chọn Hoàn Hảo"</h3>
+          <a href="https://download.com.vn/s/app+store" class="app"><img src="./Images/app/app_store.svg" alt=""></a>
+          <a href="https://download.com.vn/s/google+play" class="app"><img src="./Images/app/google_play.svg" alt=""></a>
+        </div>
+    </div>
+    <div class="container-1">
+      <div class="row-1">
+        <div class="footer-col">
+            <h4>Liên Hệ Với Chúng Tôi</h4>
+            <ul>
+                <li><span><i class="fas fa-map-marker-alt"> TP Hồ Chí Minh, TP Hồ Chí Minh, Vietnam</i></span></li>
+                <li><span><i class="fas far fa-phone-volume"> 0981 970 764 - Thứ 2 đến Thứ 7 (9h - 17h)</i></span></li>
+                <li><span><i class="fas fa-envelope-square"> nhom8@gmail.com</i></span></li>
+            </ul>
+       </div>
+
+        <div class="footer-col">
+          <h4>Chính Sách</h4>
+            <ul>
+              <li><a href="chinhsachdoitravabaohanh.html">Chính sách bảo hành</a></li>
+              <li><a href="chinhsachdoitravabaohanh.html">Chính sách đổi trả</a></li>
+              <li><a href="chinhsachthanhtoanvavanchuyen.html">Chính Sách Thanh Toán</a></li>
+              <li><a href="chinhsachthanhtoanvavanchuyen.html">Chính sách vận chuyển</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Các Sản Phẩm</h4>
+            <ul>
+              <li><a href="Nike.html">Nike</a></li>
+              <li><a href="Adidas.html">Adidas</a></li>
+              <li><a href="Puma.html">Puma</a></li> 
+              <li><a href="Sneaker.html">Sneaker</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ Trợ Khách Hàng</h4>
+            <ul>
+              <li><a href="huongdanmuahangvadosizegiay.html">Hướng Dẫn Mua Hàng</a></li>
+              <li><a href="huongdanmuahangvadosizegiay.html">Hướng Dẫn Đo Size Giày</a></li>
+              <li><a href="cauhoithuonggapvabaoquan.html">Câu Hỏi Thường Gặp</a></li>
+              <li><a href="cauhoithuonggapvabaoquan.html">Cách Bảo Quản Giày</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ Trợ Thanh Toán </h4>
+            <ul>
+              <img src="Images/brand/VISA.png" width="50px" height="50px">
+              <img src="Images/brand/CARD.png" width="50px" height="50px">
+              <img src="Images/brand/ATM.png" width="50px" height="50px">
+            </ul>
+          <h4>Follow Us</h4></li>
+            <ul>
+            <img src="Images/brand/instagram.png" width="50px" height="50px">
+            <img src="Images/brand/youtube.png" width="50px" height="50px">
+            <img src="Images/brand/FB.PNG" width="50px" height="50px">
+            </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const icon = document.querySelector('.icon');
+    const search = document.querySelector('.search');
+    icon.onclick = function(){
+        search.classList.toggle('active')
+    }
+  </script>
+</body>
+</html>
